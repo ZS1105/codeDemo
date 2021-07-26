@@ -1,0 +1,6 @@
+com\atguigu\oss\controller\FileController.class
+com\atguigu\oss\service\FileService.class
+com\atguigu\oss\OssApplication.class
+com\atguigu\oss\utils\ConstantPropertiesUtil.class
+com\atguigu\oss\service\impl\FileServiceImpl.class
+com\atguigu\oss\exception\GuliException.class
