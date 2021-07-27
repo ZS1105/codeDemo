@@ -24,8 +24,10 @@ public class MemuHelper {
      */
     public static List<JSONObject> bulid(List<Permission> treeNodes) {
         List<JSONObject> meuns = new ArrayList<>();
+
         if(treeNodes.size() == 1) {
             Permission topNode = treeNodes.get(0);
+
             //左侧一级菜单
             List<Permission> oneMeunList = topNode.getChildren();
             for(Permission one :oneMeunList) {
@@ -74,6 +76,7 @@ public class MemuHelper {
                     }
                 }
                 oneMeun.put("children", children);
+
                 meuns.add(oneMeun);
             }
         }

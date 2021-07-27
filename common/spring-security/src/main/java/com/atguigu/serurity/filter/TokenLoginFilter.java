@@ -43,7 +43,7 @@ public class TokenLoginFilter extends UsernamePasswordAuthenticationFilter {
         this.redisTemplate = redisTemplate;
         this.setPostOnly(false);
         AntPathRequestMatcher requestMatcher = new AntPathRequestMatcher("/admin/acl/login", "POST");
-        System.out.println(requestMatcher);
+        // System.out.println(requestMatcher);
         this.setRequiresAuthenticationRequestMatcher(requestMatcher);
 
     }
@@ -53,7 +53,7 @@ public class TokenLoginFilter extends UsernamePasswordAuthenticationFilter {
             throws AuthenticationException {
         try {
             User user = new ObjectMapper().readValue(req.getInputStream(), User.class);
-            System.out.println(user);
+            // System.out.println(user);
             UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword(), new ArrayList<>());
             return authenticationManager.authenticate(usernamePasswordAuthenticationToken);
         } catch (IOException e) {

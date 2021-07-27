@@ -43,7 +43,7 @@ public class TokenAuthenticationFilter extends BasicAuthenticationFilter {
     protected void doFilterInternal(HttpServletRequest req, HttpServletResponse res, FilterChain chain)
             throws IOException, ServletException {
         // System.out.println("=================<"+req.getRequestURI());
-        // System.out.println("===============token:" + req.getHeader("token"));
+
         if(req.getRequestURI().indexOf("admin") == -1) {
             chain.doFilter(req, res);
             return;
@@ -57,7 +57,7 @@ public class TokenAuthenticationFilter extends BasicAuthenticationFilter {
         }
 
         if (authentication != null) {
-            System.out.println(authentication.getPrincipal());
+            // System.out.println(authentication.getPrincipal());
             SecurityContextHolder.getContext().setAuthentication(authentication);
         } else {
             ResponseUtil.out(res, R.error());

@@ -89,8 +89,6 @@ public class PermissionServiceImpl extends ServiceImpl<PermissionMapper, Permiss
 
         rolePermissionService.remove(new QueryWrapper<RolePermission>().eq("role_id", roleId));
 
-  
-
         List<RolePermission> rolePermissionList = new ArrayList<>();
         for(String permissionId : permissionIds) {
             if(StringUtils.isEmpty(permissionId)) continue;
@@ -139,7 +137,9 @@ public class PermissionServiceImpl extends ServiceImpl<PermissionMapper, Permiss
         }
 
         List<Permission> permissionList = PermissionHelper.bulid(selectPermissionList);
+
         List<JSONObject> result = MemuHelper.bulid(permissionList);
+        // System.out.println("result:" + result);
         return result;
     }
 

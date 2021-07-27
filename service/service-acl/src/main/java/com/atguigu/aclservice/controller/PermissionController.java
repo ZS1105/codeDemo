@@ -34,6 +34,7 @@ public class PermissionController {
     public R queryAllMenu() {
         List<Permission> list =  permissionService.queryAllMenu();
         List<JSONObject> jsonObjects = MemuHelper.bulid(list);
+        System.out.println(list);
         return R.ok().data("allMenu",list);
     }
 
@@ -63,7 +64,10 @@ public class PermissionController {
     @ApiOperation(value = "新增菜单")
     @PostMapping("addMenu")
     public R addMenu(@RequestBody Permission permission) {
-        permissionService.save(permission);
+        if (!"0".equals(permission.getPid())){
+            permissionService.save(permission);
+        }
+
         return R.ok();
     }
 

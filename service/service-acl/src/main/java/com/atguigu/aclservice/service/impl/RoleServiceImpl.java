@@ -84,7 +84,7 @@ public class RoleServiceImpl extends ServiceImpl<RoleMapper, Role> implements Ro
         if(roleIdList.size() > 0) {
             roleList = baseMapper.selectBatchIds(roleIdList);
         }
-        System.out.println("roleList:" + roleList);
+        // System.out.println("roleList:" + roleList);
         return roleList;
     }
 }
