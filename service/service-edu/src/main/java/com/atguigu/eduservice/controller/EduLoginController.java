@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 @Api(description = "登录信息")
 @RestController
 @RequestMapping("/eduservice/user")
-@CrossOrigin  // 解决跨域问题
+// @CrossOrigin  // 解决跨域问题
 public class EduLoginController {
     @PostMapping("/login")
     public R login(){

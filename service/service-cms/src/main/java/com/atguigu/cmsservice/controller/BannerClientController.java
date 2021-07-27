@@ -21,7 +21,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/cmsservice/bannerclient")
 @Api(description = "网站首页Banner列表")
-@CrossOrigin //跨域
+// @CrossOrigin //跨域
 public class BannerClientController {
     @Autowired
     private CrmBannerService bannerService;
