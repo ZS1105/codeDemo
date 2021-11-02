@@ -17,8 +17,8 @@ public class ConstantUtil {
     public static String WX_OPEN_REDIRECT_URL = "http://guli.shop/api/ucenter/wx/callback";
 
     public static String END_POINT = "oss-cn-beijing.aliyuncs.com";
-    public static String ACCESS_KEY_ID = "LTAI5tQRaKGTZDCjZnWDXwXP";
-    public static String ACCESS_KEY_SECRET = "gwbGp3wM6sqjLTCJZccSOJ4ItLEB3n";
+    public static String ACCESS_KEY_ID = "ACCESS_KEY_ID";  // 真实的ACCESS_KEY_ID
+    public static String ACCESS_KEY_SECRET = "ACCESS_KEY_SECRET";  //真实的ACCESS_KEY_SECRET
     public static String BUCKET_NAME = "edu-2004";
 
     public static String SIGN_NAME = "我的谷粒在线教育网站";
